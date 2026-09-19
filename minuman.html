@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" data-bs-theme="dark">
+<html lang="id" class="dark" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Hatero</title>
 </head>
-<body>
+<body class="d-flex min min-vh-100">
     <!-- ikon -->
-    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input">
-    <a class="nav-link active" href="index.html"><i class="bi bi-house"></i><span class="nav-label">Home</span></a>
-    <a class="nav-link" href="minuman.html"><i class="bi bi-cup-straw"></i><span class="nav-label">Tier List Minuman</span></a>
-    <a class="nav-link" href="makanan.html"><i class="bi bi-egg-fried"></i><span class="nav-label">Tier List Makanan</span></a>
-    <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i><span class="nav-lavel">Contact</span></a>
-    <label class="topbar-toggle ..." for="sidebarToggle"><i class="bi-list"></i></label>
+    <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-input">
     <!--Sidebar coy-->
     <aside class="sidebar">
         <a class="sidebar-brand" href="index.html">
             <span class='brand-text'>Tier List</span>
-            <span class="brand-short">TK</span>
+            <span class="brand-short">TL</span>
         </a>
         <!-- Main nav -->
         <nav>
@@ -28,34 +24,30 @@
                 <!-- home -->
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">
-                        <svg class="icon"><use href="#i-home"/></svg>
-                        <span class="nav-label">Home</span>
+                        <i class="bi bi-house"></i><span class="nav-label">Home</span>
                     </a>
                 </li>
             </ul>
             <p class="nav-heading">tier List</p>
             <ul class="nav flex-column">
                 <!-- minuman -->
-                <li class="nav-link">
+                <li class="nav-item">
                     <a class="nav-link" href="minuman.html">
-                        <svg class="icon"><use href="#i-fork"/></svg>
-                        <span class="nav-label">Tier List makanan</span>
+                        <i class="bi bi-cup-straw"></i><span class="nav-label">Tier List Minuman</span>
                     </a>
                 </li>
                 <!-- makanan -->
                 <li class="nav-item">
                     <a class="nav-link" href="makanan.html">
-                        <svg class="icon"><use href="#i-fork"/></svg>
-                        <span classs="nav-label">Tier List Makanan</span>
+                        <i class="bi bi-egg-fried"></i><span class="nav-label">Tier List Makanan</span>
                     </a>
                 </li>
             </ul>
             <p class="nav-heading">Info</p>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">
-                        <svg class="icon"><use href="#i-mail"/></svg>
-                        <span class="nav-label">Contact</span>
+                    <a class="nav-link" href="https://github.com/HeryAkmal/MyTierList">
+                        <i class="bi bi-envelope"></i><span class="nav-label">Contact</span>
                     </a>
                 </li>
             </ul>
@@ -63,15 +55,77 @@
     </aside>
     <!-- Area kanan -->
     <div class="page flex-grow-1 d-flex flex-column">
-    <!-- Header coy -->
-     <header class="topbar d-flex align-items-center gap-3 px-3">
-        <label class="topbar-toggle d-none d-md-inline-flex" for="sidebarToggle">
-            <svg class="icon"><use href="#i-toggle"/></svg>
-        </label>
+        <!-- Header coy -->
+        <header class="topbar d-flex align-items-center gap-3 px-3">
+            <label class="topbar-toggle d-none d-md-inline-flex" for="sidebarToggle">
+                <i class="bi bi-last"></i>
+            </label>
+            <div class="topbar-banner flex-grow-1 d-one d-md-flex-grow-1 d-none d-md-flex gap-2">
+                <div class="topbar-banner-item">Banner 1</div>
+                <div class="Topbar-banner-item">banner 2</div>
+            </div>
+            <!-- Sini headernya-->
+        </header>
         <!-- isi halaman -->
         <main class="flex-grow-1 p-3 p-md-4">
-            <h1 class="h4">Konten halaman</h1>
-            <p class="text-secondary">Lorem ipsum</p>
+            <h1 class="h3">Tier List Minuman</h1>
+            <p class="text-secondary mb-4">Klik foto untuk membaca penjelasannya.</p>
+            <section aria-label="Tier List Munuman">
+            <div class="tier-columns">
+                <div class="tier-col-head cat-1"><i class="bi bi-cup-hot"aria-hidden="true"></i> Kopi</div>
+                <div class="tier-col-head cat-2"><i class="bi bi-cup-straw"aria-hidden="true"></i> Teh</div>
+                <div class="tier-col-head cat-3"><i class="bi bi-droplet"aria-hidden="true"></i> Jus</div>
+                <div class="tier-col-head cat-4"><i class="bi bi-three-dots"aria-hidden="true"></i> Lainnya</div>
+            </div>
+            <div class="tier-row">
+                <div class="tier-label tier-ts">S</div>
+                <div class="tier-cells">
+                    <div class="tier-cell">
+                        <h3 class="tier-cell-title cat-1"><i class="bi bi-cup-hot"></i> Kopi</h3>
+                        <ul class="Tier-items">
+                            <li><a class="tier-item" href="kopisusu.html" title="kopi Susu">
+                                <img src="img/kopisusu.jpg" alt="Foto Kopi Susu" width="105" height="105" loading="lazy">
+                                <span class="tier-name">Kopi Susu</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="tier-cell">
+                        <h3 class="tier-cell-title cat-1"><i class="bi bi-cup-hot"></i> Kopi</h3>
+                        <ul class="tier-items">
+                            <li><a class="tier-item" href="kopisusu.html" title="kopi Susu">
+                                <img src="img/kopisusu.jpg" alt="Foto Kopi Susu" width="105" height="105" loading="lazy">
+                                <span class="tier-name">Kopi Susu</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="tier-cell">
+                        <h3 class="tier-cell-title cat-2"><i class="bi bi-cup-straw"></i> Teh</h3>
+                        <ul class="tier-items">
+                            <li><a class="tier-item" href="esteh.html" title="Es Teh Manis">
+                                <img src="img/esteh.jpg" alt="Foto Es Teh" width="105" height="105" loading="lazy">
+                                <span class="tier-name">Es Teh Manis</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="tier-cell">
+                        <h3 class="tier-cell-title cat-3"><i class="bi bi-droplet"></i> Jus</h3>
+                    </div>
+                        <ul class="tier-items">
+                            <li><a class="tier-item" href="jusalpukat.html" title="Jus Alpukat">
+                                <img src="img/jusalpukat.jpg" alt="Foto Jus Alpukat" width="105" height="105" loading="lazy">
+                                <span class="tier-name">Jus Alpukat</span>
+                            </a></li>
+                        </ul>
+                    <div class="tier-cell">
+                        <h3 class="tier-cell-title cat-4"><i class="bi bi-three-dots"></i> Lainnya</h3>
+                        <ul class="tier-items">
+                            <li><a class="tier-item" href="boba.html" title="Boba">
+                                <img src="img/boba.jpg" alt="Foto Boba" width="105" height="105" loading="lazy">
+                                <span class="tier-name">Boba</span>
+                            </a></li>
+                        </ul>
+                    </div>
+            </div>
         </main>
 </body>
 </html>
