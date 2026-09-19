@@ -1,0 +1,23 @@
+:root {
+    --bg-sidebar: #1d1e22;
+    --bg-topbar: #1d1e22;
+    --bg-main: #2a2b31;
+    --bg-raised: #34353d;
+    --border: #3b3c44;
+    --text: #e6e6ea;
+    --text-muted: #9a9ba5;
+    --accent: #1e9bff;
+    --sidebar-w: 250px;
+    --sidebar-w-collapsed: 70px;
+    --topbar-h: 72px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-main);
+    color: var(--text);
+}
+
+sidebar{
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    background: var(--bg-sidebar);
