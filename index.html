@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Hatero</title>
 </head>
-<body>
+<body class="d-flex min min-vh-100">
     <!-- ikon -->
-    <!-- Masukkan ke aside woy -->
     <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-input">
-    <a class="nav-link active" href="index.html"><i class="bi bi-house"></i><span class="nav-label">Home</span></a>
-    <a class="nav-link" href="minuman.html"><i class="bi bi-cup-straw"></i><span class="nav-label">Tier List Minuman</span></a>
-    <a class="nav-link" href="makanan.html"><i class="bi bi-egg-fried"></i><span class="nav-label">Tier List Makanan</span></a>
-    <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i><span class="nav-label">Contact</span></a>
-    <label class="topbar-toggle ..." for="sidebarToggle"><i class="bi-list"></i></label>
     <!--Sidebar coy-->
     <aside class="sidebar">
         <a class="sidebar-brand" href="index.html">
@@ -30,34 +24,30 @@
                 <!-- home -->
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html">
-                        <svg class="icon"><use href="#i-home"/></svg>
-                        <span class="nav-label">Home</span>
+                        <i class="bi bi-house"></i><span class="nav-label">Home</span>
                     </a>
                 </li>
             </ul>
             <p class="nav-heading">tier List</p>
             <ul class="nav flex-column">
                 <!-- minuman -->
-                <li class="nav-link">
+                <li class="nav-item">
                     <a class="nav-link" href="minuman.html">
-                        <svg class="icon"><use href="#i-fork"/></svg>
-                        <span class="nav-label">Tier List Minuman</span>
+                        <i class="bi bi-cup-straw"></i><span class="nav-label">Tier List Minuman</span>
                     </a>
                 </li>
                 <!-- makanan -->
                 <li class="nav-item">
                     <a class="nav-link" href="makanan.html">
-                        <svg class="icon"><use href="#i-fork"/></svg>
-                        <span classs="nav-label">Tier List Makanan</span>
+                        <i class="bi bi-egg-fried"></i><span class="nav-label">Tier List Makanan</span>
                     </a>
                 </li>
             </ul>
             <p class="nav-heading">Info</p>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">
-                        <svg class="icon"><use href="#i-mail"/></svg>
-                        <span class="nav-label">Contact</span>
+                    <a class="nav-link" href="https://github.com/HeryAkmal/MyTierList">
+                        <i class="bi bi-envelope"></i><span class="nav-label">Contact</span>
                     </a>
                 </li>
             </ul>
