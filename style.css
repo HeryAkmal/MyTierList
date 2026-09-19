@@ -12,12 +12,158 @@
     --topbar-h: 72px;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg-main);
     color: var(--text);
 }
 
-sidebar{
+.page{ min-width: 0;
+}
+.topbar {
+    height: var(--topbar-h);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg-topbar);
+    border-bottom: 1px solid var(--border);
+}
+.topbar-toggle {
+    padding: .4rem;
+    color: var(--text);
+    cursor: pointer;
+}
+.topbar-toggle .bi{ font-size: 1.6rem; }
+.topbar-toggle .icon { width: 26px; height: 26px;}
+.topbar-banner-item{
+    height: 56px;
+    min-width: 200px;
+    display: grid;
+    place-items: center;
+    background: var(--bg-raised);
+    border-radius: .375rem;
+    color: var(--text-muted);
+    font-size: .85rem;
+}
+.footer a:hover{
+    color: var(--text) !important;
+}
+
+.card{
+    --bs-card-bg: var(--bg-raised);
+    --bs-card-border-color: var(--border);
+}
+
+.nav-heading {
+    margin: 0;
+    padding: 1.1rem 1.5rem .4rem;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);    
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+/*Ini sidebar*/
+.sidebar{
     width: var(--sidebar-w);
     flex-shrink: 0;
     background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    transition: width .2s ease;
+}
+
+.sidebar-brand{
+    height: var(--topbar-h);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+}
+.brand-short{
+    display: none;
+}
+
+.sidebar .nav{
+    --bs-nav-link-color: var(--text);
+    --bs-nav-link-hover-color: white;
+    --bs-nav-link-padding-x: 1.5rem;
+    --bs-nav-link-padding-y: .7rem;
+}
+.sidebar .nav-link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.sidebar .nav-link:hover{
+    background-color: rgba(255, 255, 255, .05);
+}
+.sidebar .nav-link.active{
+    color: var(--accent);
+}
+.sidebar .nav-link .bi { font-size: 1.25rem; }
+
+.sidebar-toggle-input{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-toggle-input:checked ~ .sidebar{
+    width: var(--sidebar-w-collapsed);
+}
+.sidebar-toggle-input:checked ~ .sidebar .nav-label,
+.sidebar-toggle-input:checked ~ .sidebar .nav-heading,
+.sidebar-toggle-input:checked ~ .sidebar .brand-text{
+    display: none;
+}
+.sidebar-toggle-input:checked ~ .sidebar .brand-short{
+    display: inline;
+}
+.sidebar-toggle-input:checked ~ .sidebar .nav-link {
+    justify-content: center;
+    padding-inline: 0;
+}
+.sidebar-toggle-input:focus-visible ~ .page .topbar-toggle{
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+/*Tierlist gokil*/
+.tier-row{
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.tier-label{
+    width: 64px;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+.tier-s { background: #e8524f; }
+.tier-a { background: #f08a4b; }
+.tier-b { background: #e5b83c; color: #1d1e22; }
+.tier-c { background: #4fa872; }
+
+.tier-item{
+    padding: .6rem .5rem;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: .375rem;
+}
