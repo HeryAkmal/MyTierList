@@ -597,7 +597,7 @@ body {
     padding: 1.5rem 0;
     margin-top: 3rem;
 }
-/* Responsive */
+/* ingpo tablet */
 @media (max-width: 768px) {
     :root {
         --sidebar-w: 70px;
@@ -632,6 +632,19 @@ body {
         min-width: 140px;
     }
 
+    .topbar {
+        padding-inline: .75rem !important;
+    }
+
+    .banner {
+        width: min(180px, calc(100vw - var(--sidebar-w) - 3.5rem));
+    }
+
+    .tier-content {
+        gap: 8px;
+        padding: 8px;
+    }
+
     .tier-items {
         gap: .5rem;
     }
@@ -654,8 +667,46 @@ body {
     .coming-soon h1 {
         font-size: 3rem;
     }
-}
 
+    .drink-hover,
+    .tier-item::after {
+        display: none;
+    }
+
+    .water-content {
+        padding: 20px;
+    }
+
+    .water-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .water-box {
+        min-height: 0;
+    }
+
+    .water-box-title {
+        width: 100%;
+        font-size: 1.35rem;
+    }
+
+    .water-description {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .water-video {
+        padding: 20px;
+    }
+
+    .water-video img,
+    .water-video iframe {
+        height: auto;
+        min-height: 200px;
+    }
+}
+/* ingpo hape*/
 @media (max-width: 480px) {
     :root {
         --card-w: 70px;
@@ -677,11 +728,44 @@ body {
     .coming-soon h1 {
         font-size: 2.3rem;
     }
-}
 
-@media (max-width: 900px) {
-    .water-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
+    .topbar {
+        height: 58px;
+    }
+
+    .sidebar,
+    .sidebar-brand {
+        width: 56px;
+    }
+
+    .sidebar-brand {
+        height: 58px;
+    }
+
+    .topbar-toggle .bi {
+        font-size: 1.35rem;
+    }
+
+    .banner {
+        width: calc(100vw - 56px - 3rem);
+        height: 42px;
+    }
+
+    .tier-row {
+        align-items: stretch;
+    }
+
+    .tier-content {
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .water-content {
+        padding: 16px;
+    }
+
+    .water-title h1 {
+        font-size: 1.5rem;
     }
 }
+
