@@ -39,8 +39,13 @@ body {
     color: var(--text);
     cursor: pointer;
 }
-.topbar-toggle .bi{ font-size: 1.6rem; }
-.topbar-toggle .icon { width: 26px; height: 26px;}
+.topbar-toggle .bi{ 
+    font-size: 1.6rem; 
+}
+.topbar-toggle .icon { 
+    width: 26px; 
+    height: 26px;
+}
 .topbar-banner-item{
     height: 56px;
     min-width: 200px;
@@ -124,7 +129,9 @@ body {
 .sidebar .nav-link.active{
     color: var(--accent);
 }
-.sidebar .nav-link .bi { font-size: 1.25rem; }
+.sidebar .nav-link .bi { 
+    font-size: 1.25rem; 
+}
 
 .sidebar-toggle-input{
     position: absolute;
@@ -152,12 +159,17 @@ body {
     outline-offset: 2px;
 }
 /*Tierlist gokil*/
+.tier-list{
+    width: 100%;
+    margin-top: 1rem;
+}
 .tier-row{
     display: flex;
     background: var(--bg-raised);
     border: 1px solid var(--border);
     border-radius: .25rem;
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: .5rem;
 }
 .tier-label{
     width: var(--tier-label-w);
@@ -178,7 +190,7 @@ body {
 .tier-a {
     background: #f08a4b; 
     --tier-color: #f58a4b;
-    --tier-text; black;
+    --tier-text: black;
     color: var(--tier-text);
 }
 .tier-b {
@@ -201,10 +213,15 @@ body {
 }
 
 .tier-item{
+    position: relative;
+    display: block;
     padding: .6rem .5rem;
     background: var(--bg-main);
     border: 1px solid var(--border);
     border-radius: .375rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: transform .15s ease, border-color .15s ease, background-color .15 ease;
 }
 .tier-items {
   display: flex;
@@ -223,23 +240,51 @@ body {
     border-radius: .25rem;
     transition: transform .15s ease, border-colors .15s ease;
 }
-.tier-item: hover img,
+.tier-item:hover{
+    background: #303139;
+}
+.tier-item:hover img,
 .tier-item:focus-visible img{
     transform: translateY(-3px);
     border-color: var(--accent);
 }
-.tier-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tier-item:focus-visible { 
+    outline: 2px solid var(--accent); 
+    outline-offset: 2px; 
+}
+.tier-item::after{
+    content: attr(data-description);
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    padding: .75rem;
+    line-height: 1.4;
+    box-shadow: 0 8px 20px black;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .15s ease, transform .15s ease;
+    z-index: 100;
+}
+.tier-item:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%);
+}
 .tier-name {
     display: block;
     margin-top: .4rem;
     font-size: .8rem;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
 }
 .tier-tags {
     display: block;
     margin-top: .15rem;
-    font-size: 7rem;
+    font-size: .65rem;
     font-weight: 700;
     line-height: 1.2;
     text-transform: uppercase;
@@ -252,7 +297,9 @@ body {
 .cat-3 { color: #ffc223}
 .cat-4 { color: var(--tag-green);}
 
-.tier-columns {display: none;}
+.tier-columns {
+    display: none;
+}
 
 .tier-col-head {
     padding: .55rem .5rem;
@@ -383,6 +430,7 @@ body {
 
 .water-video img {
     width: 100%;
+    height: 305px;
     display: block;
     border: 3px solid #ef5350;
     border-radius: 5px;
@@ -465,6 +513,56 @@ body {
     background-color: #1e9bff;
     margin: 0 auto 12px;
 }
+.drink-item{
+    position: relative;
+}
 
-
-
+.drink-card{
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+}
+.drink-card span{
+    display: block;
+    margin-top: .4rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+.drink-hover {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 0;
+    width: 300px;
+    padding: .75rem;
+    background: #18191d;
+    border: 1px solid var(--border);
+    border-radius: .375rem;
+    box-shadow: 0 8px 20px black;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 100;
+    transition: opacity .15s ease, transform .15s ease;
+    transform: translateX(5px);
+}
+.drink-hover img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: .25rem;
+}
+.drink-info h3{
+    margin: .6rem 0 .3rem;
+    font-size: 1.1rem;
+}
+.drink-info p {
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+}
+.drink-item:hover .drink-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
