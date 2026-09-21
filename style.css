@@ -15,17 +15,15 @@
     --tag-green: #5fd08a;
 }
 
-
-
-
-
 body {
     background: var(--bg-main);
     color: var(--text);
 }
 
-.page{ min-width: 0;
+.page{ 
+    min-width: 0;
 }
+
 .topbar {
     height: var(--topbar-h);
     position: sticky;
@@ -171,6 +169,12 @@ body {
     overflow: visible;
     margin-bottom: .5rem;
 }
+.tier-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+}
 .tier-label{
     width: var(--tier-label-w);
     flex-shrink: 0;
@@ -260,6 +264,11 @@ body {
     transform: translateY(-50%);
     width: 220px;
     padding: .75rem;
+    background: #18191d;
+    border: 1px solid var(--border);
+    border-radius: .375rem;
+    color: var(--text);
+    font-size: .75rem;
     line-height: 1.4;
     box-shadow: 0 8px 20px black;
     opacity: 0;
@@ -444,7 +453,9 @@ body {
 .water-video iframe {
     width: 100%;
     height: 305px;
-    border: none;
+    display: block;
+    border: 3px solid var(--reason-color);
+    border-radius: 5px;
 }
 
 .tier-s .water-title h1::before,
@@ -478,6 +489,21 @@ body {
 .tier-c .water-video,
 .tier-d .water-video {
     border-color: var(--tier-color);
+}
+.tier-s-page {
+    --reason-color: #e8524f;
+}
+.tier-a-page {
+    --reason-color: #f08a4b;
+}
+.tier-b-page {
+    --reason-color: #e5b83c;
+}
+.tier-c-page {
+    --reason-color: #4fa872;
+}
+.tier-d-page {
+    --reason-color: #777b84;
 }
 
 .page-title {
@@ -521,6 +547,14 @@ body {
     display: block;
     color: var(--text);
     text-decoration: none;
+}
+.drink-card img {
+    display: block;
+    width: var(--card-w);
+    height: var(--card-w);
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: .25rem;
 }
 .drink-card span{
     display: block;
