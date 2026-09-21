@@ -590,7 +590,10 @@ body {
     visibility: visible;
     transform: translateX(0);
 }
-
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+}
 /* Responsive */
 @media (max-width: 768px) {
     :root {
