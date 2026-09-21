@@ -591,8 +591,11 @@ body {
     transform: translateX(0);
 }
 .footer {
+    background-color: var(--bg-topbar);
+    border-top: 1px solid var(--border);
     text-align: center;
     padding: 1.5rem 0;
+    margin-top: 3rem;
 }
 /* Responsive */
 @media (max-width: 768px) {
